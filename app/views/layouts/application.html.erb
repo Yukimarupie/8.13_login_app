@@ -12,7 +12,10 @@
   <body>
 
     <% if logged_in? %>
-      <%= link_to "User Page", user_path(current_user.id) %>
+      <h3>ユーザーID : <%= current_user.id %></h3>
+      <h3>ユーザー名 : <%= current_user.name %></h3>
+      
+      <!-- <%= link_to "User Page", user_path(current_user.id) %> -->
       <%= link_to "Logout", session_path(current_user.id), method: :delete %>
     <% else %>
       <%= link_to "Sign up", new_user_path %>
