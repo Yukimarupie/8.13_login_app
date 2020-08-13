@@ -1,0 +1,9 @@
+<h1>Top Page</h1>
+<div>
+    <% @users.each do |user| %>
+        <%= user.name %>
+    <% end %>
+</div>
+<%= link_to 'Sign Up', signup_path %>
+<%= link_to 'Log In', login_path %>
+
